@@ -23,13 +23,18 @@ public class Rational
         return X;
     }
 
-       public Rational Multiplicacion(Rational a, Rational b)
+       public Rational Multi(Rational a, Rational b)
        {
         Rational X=new Rational();
         X.setNumerador(a.getNumerador()*b.getNumerador());
         X.setDenominador(a.getDenominador()*b.getDenominador());
 
         return X;
+       }
+       public boolean equal(Rational a,Rational b)
+       {
+        return a.getNumerador()*b.getDenominador()
+        ==b.getNumerador()*a.getDenominador();
        }
        
     public int getNumerador()

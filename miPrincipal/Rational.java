@@ -15,7 +15,7 @@ public class Rational
        this.r[0]=a;
        this.r[1]=b; 
     }
-    public Rational Suma(Rational a, Rational b)
+    public Rational add(Rational a, Rational b)
     {
         Rational X=new Rational();
         X.setNumerador(a.getNumerador()*b.getDenominador()+a.getDenominador()*b.getNumerador());

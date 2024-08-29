@@ -73,7 +73,7 @@ public class Conjunto
         }
     }
     //DEVUELVA EL NUMERO DE ELEMENTOS
-    public int cardinal()
+    public int getcardinal()
     {
         return this.cardinal;
     }

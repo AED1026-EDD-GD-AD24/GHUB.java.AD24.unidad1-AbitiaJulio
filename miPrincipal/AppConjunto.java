@@ -38,9 +38,14 @@ public class AppConjunto
         B.añadir(ele);
         ele=3;
         B.añadir(ele);
+        B.añadir(4);
+        B.añadir(10);
         System.out.println(" EL CONJUNTO B TIENE : "+B.getcardinal()+ " ELEMENTOS");
+        B.retirar(10);
+        System.out.println(" EL CONJUNTO C TIENE : "+B.getcardinal()+ " ELEMENTOS");
         
        Conjunto C=A.union(B);
        System.out.println(" EL CONJUNTO C TIENE : "+C.getcardinal()+ " ELEMENTOS");
+       System.out.println(C.toString());
     }
 }

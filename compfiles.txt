@@ -6,3 +6,4 @@
 ./miPrincipal/Conjunto.java
 ./miPrincipal/AppRational.java
 ./miPrincipal/Fecha.java
+./miPrincipal/PosicionIlegalException.java

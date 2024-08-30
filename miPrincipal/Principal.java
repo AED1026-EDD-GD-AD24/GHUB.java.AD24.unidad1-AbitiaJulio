@@ -1,13 +1,13 @@
 package miPrincipal;
 import java.util.Scanner;
 
-public class Principal {
+public class Principal { 
     public String getGreeting()
      {
         return "HOLA MUNDO!";
     }
 
-    public static void main(String[] args) 
+    public static void main(String[] args) throws Exception
     {
         Scanner consola=new Scanner(System.in);
         int opc=0;

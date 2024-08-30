@@ -52,6 +52,7 @@ public class Conjunto
                 cto=nuevoCto;
             }
             cto[cardinal]=elemento;
+            cardinal++;
         }
     }
     //QUITA EL ELEMENTO DEL CONJUNTO
@@ -94,6 +95,22 @@ public class Conjunto
             u.añadir(c2.cto[k]);
         }
         return u;
+    }
+    @Override
+    public String toString()
+    {
+        String s="{";
+        
+            for(int K=0;K<cardinal;K++)
+            {
+                s+=cto[K].toString()+",";
+            }if (cardinal>0)
+             {
+                s=s.substring(0,s.length()-1);
+            }
+            s+="}";
+            return s;
+        
     }
 }
 

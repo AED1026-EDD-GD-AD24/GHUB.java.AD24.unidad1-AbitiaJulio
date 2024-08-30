@@ -10,8 +10,12 @@ public class Rational
        this.r[1]=1; 
     }
     
-    public Rational(int a,int b)
+    public Rational(int a,int b) throws PosicionIlegalException
     {
+        if(b<=0)
+        {
+            throw new PosicionIlegalException();
+        }
        this.r[0]=a;
        this.r[1]=b; 
     }
@@ -23,19 +27,43 @@ public class Rational
         return X;
     }
 
+    public Rational add(Rational a)
+    {
+        Rational x=new Rational();
+        x.setNumerador(this.getNumerador()*a.getDenominador()+a.getDenominador()*this.getNumerador());
+        x.setDenominador(this.getDenominador()*a.getDenominador());
+        return x;
+    }
+
        public Rational Multi(Rational a, Rational b)
        {
         Rational X=new Rational();
-        X.setNumerador(a.getNumerador()*b.getNumerador());
-        X.setDenominador(a.getDenominador()*b.getDenominador());
+        X.setNumerador(this.getNumerador()*a.getNumerador());
+        X.setDenominador(this.getDenominador()*a.getDenominador());
 
         return X;
+       }
+
+       public Rational Multi(Rational a)
+       {
+        Rational x=new Rational();
+        x.setNumerador(this.getNumerador()*a.getNumerador());
+        x.setDenominador(this.getDenominador()*a.getDenominador());
+
+        return x;
        }
        public boolean equal(Rational a,Rational b)
        {
         return a.getNumerador()*b.getDenominador()
         ==b.getNumerador()*a.getDenominador();
        }
+
+       public boolean equal(Rational a)
+       {
+        return a.getNumerador()*this.getDenominador()
+        ==this.getNumerador()*a.getDenominador();
+       }
+
        
     public int getNumerador()
     {

@@ -2,7 +2,7 @@ package miPrincipal;
 import java.util.Scanner;
 public class AppRational 
 {
-    public static void menu()
+    public static void menu() throws Exception 
     {
         System.out.println("======================================");
         System.out.println("  OPERACIONES CON NUMEROS RACIONALES  ");
@@ -18,6 +18,12 @@ public class AppRational
         System.out.println("EL RESULTADO DE LA MULTIPLICACION DE :"+r4);
         Rational r5=new Rational(7,3);
         System.out.println("EL RESULTADO DE LA COMPARACION DE "+r3+" y "+r5+" es "+r5.equal(r3, r5));
+
+        System.out.println("EL RESULTADO DE LA COMPARACION DE "+r3+" y "+r5+" es "+r3.equal(r5));
+
+        //PROBAR UN RACIONAL CON DENOMINADOR 0
+        Rational r6=new Rational(5,0); //LANZA UNA EXCEPTION
+        System.out.println(" VALOR DEL RACIONAL ="+r6.toString());
     }
     
 }

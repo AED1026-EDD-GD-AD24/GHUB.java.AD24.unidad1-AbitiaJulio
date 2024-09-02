@@ -20,6 +20,12 @@ public class Principal {
             System.out.println("3) Cadena");
             System.out.println("4) Numerote");
             System.out.println("5) Conjunto");
+            System.out.println("6) ");
+            System.out.println("7) ");
+            System.out.println("8) ");
+            System.out.println("9) Punto");
+            System.out.println("10) Triangulo");
+            System.out.println("11) Poligono");
             System.out.println();
             System.out.println("0) Salir");
             System.out.println("SELECCIONE UNA OPCION");
@@ -34,7 +40,14 @@ public class Principal {
                 case 4:
                 case 5:
                 AppConjunto.menu();
-                    break;
+                break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                AppPunto.menu();
+                break;
+                case 10:
                 case 0:
                     System.out.println("HASTA LUEGO:");
                     break;

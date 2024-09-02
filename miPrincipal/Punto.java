@@ -20,6 +20,12 @@ public class Punto
         this.y = y;
         this.z = z;
     }
+    public double distancia(Punto p)
+    {
+        double d;
+        d=Math.sqrt(Math.pow(p.x=this.x,2)+Math.pow(d, d))
+        return d;
+    }
 
     public int getX() {
         return x;
